@@ -10,6 +10,7 @@ class AddTask extends StatelessWidget {
     return Container(
       color: Color.fromRGBO(117, 117, 117, 1),
       child: Container(
+        padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -17,12 +18,41 @@ class AddTask extends StatelessWidget {
             topRight: Radius.circular(30),
           ),
         ),
-        child: Column(children: [
-          Text("Add Task"),
-          TextField(),
-          TextButton(
-            onPressed: () {},
-            child: Text("Add Task"),
+        child:
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Text(
+            "Add Task",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.lightBlueAccent,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          TextField(
+            autofocus: true,
+            textAlign: TextAlign.center,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 8.0,
+              left: 20,
+              right: 20,
+            ),
+            child: Container(
+              color: Colors.blueAccent,
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Add ",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           )
         ]),
       ),
